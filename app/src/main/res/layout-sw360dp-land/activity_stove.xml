@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".StoveActivity"
+    tools:ignore="MissingDefaultResource">
+
+
+    <ImageView
+        android:id="@+id/img_cycle6"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/circle_whited"
+        app:layout_constraintEnd_toStartOf="@+id/cooker_analog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cooker_analog" />
+
+    <ImageView
+        android:id="@+id/img_cycle7"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/circle_whited"
+        app:layout_constraintEnd_toStartOf="@+id/cooker2_analog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cooker2_analog" />
+
+    <ImageView
+        android:id="@+id/img_sun3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/ic_baseline_timer_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle6"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle6"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle6"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle6"
+        app:tint="@color/light_text" />
+
+    <ImageView
+        android:id="@+id/img_sun4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/ic_baseline_timer_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle7"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle7"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle7"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle7"
+        app:tint="@color/light_text" />
+
+    <TextView
+        android:id="@+id/t_LightData15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/real_time"
+        android:textColor="@color/bold_text"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/t_LightData11"
+        app:layout_constraintEnd_toEndOf="@+id/t_LightData11"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/t_LightData14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:text="@string/ov_04"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/stove_txt"
+        app:layout_constraintTop_toTopOf="@+id/stove_txt"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/kitchen"
+        android:textColor="@color/light_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/stove_txt"
+        app:layout_constraintTop_toBottomOf="@+id/stove_txt" />
+
+    <ImageView
+        android:id="@+id/img_arrow3"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintTop_toTopOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/t_LightData11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/status"
+        android:textColor="@color/bold_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/sw_stove"
+        app:layout_constraintEnd_toEndOf="@+id/sw_stove"
+        app:layout_constraintStart_toStartOf="@+id/sw_stove" />
+
+    <Switch
+        android:id="@+id/sw_stove"
+        style="@style/Color1SwitchStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        android:checked="false"
+        app:layout_constraintBottom_toBottomOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/stove_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/stove"
+        android:textColor="@color/bold_text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <com.unity.tabletgorjav.Croller
+        android:id="@+id/cooker_analog"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        app:back_circle_color="#FFFFFF"
+        app:back_circle_disable_color="@color/light_text"
+        app:back_circle_radius="130"
+        app:enabled="true"
+        app:indicator_color="@color/light_text"
+        app:indicator_disable_color="@color/gray_600"
+        app:indicator_width="8"
+        app:is_continuous="true"
+        app:label=""
+        app:label_color="@color/selected_text"
+        app:label_disabled_color="#6200EA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.38"
+        app:main_circle_color="#FFFFFF"
+        app:main_circle_disable_color="@color/light_text"
+        app:max="9"
+        app:progress_primary_color="@color/orange"
+        app:progress_primary_disable_color="@color/light_text"
+        app:progress_primary_stroke_width="12"
+        app:progress_secondary_color="@color/gray"
+        app:progress_secondary_disable_color="@color/light_text"
+        app:progress_secondary_stroke_width="15"
+        app:start_offset="0" />
+
+    <com.unity.tabletgorjav.Croller
+        android:id="@+id/cooker2_analog"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        app:back_circle_color="#FFFFFF"
+        app:back_circle_disable_color="@color/light_text"
+        app:back_circle_radius="130"
+        app:enabled="true"
+        app:indicator_color="@color/light_text"
+        app:indicator_disable_color="@color/gray_600"
+        app:indicator_width="8"
+        app:is_continuous="true"
+        app:label=""
+        app:label_color="@color/selected_text"
+        app:label_disabled_color="#6200EA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85"
+        app:main_circle_color="#FFFFFF"
+        app:main_circle_disable_color="@color/light_text"
+        app:max="9"
+        app:progress_primary_color="@color/orange"
+        app:progress_primary_disable_color="@color/light_text"
+        app:progress_primary_stroke_width="12"
+        app:progress_secondary_color="@color/gray"
+        app:progress_secondary_disable_color="@color/light_text"
+        app:progress_secondary_stroke_width="15"
+        app:start_offset="0" />
+
+    <TextView
+        android:id="@+id/analog_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/stove_a"
+        android:textColor="@color/bold_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cooker_analog"
+        app:layout_constraintStart_toEndOf="@+id/cooker_analog" />
+
+    <TextView
+        android:id="@+id/analog2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/stove_b"
+        android:textColor="@color/bold_text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cooker2_analog"
+        app:layout_constraintStart_toEndOf="@+id/cooker2_analog" />
+
+    <TextView
+        android:id="@+id/pro_cook1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cooker_analog"
+        app:layout_constraintEnd_toEndOf="@+id/cooker_analog"
+        app:layout_constraintStart_toStartOf="@+id/cooker_analog"
+        app:layout_constraintTop_toTopOf="@+id/cooker_analog" />
+
+    <TextView
+        android:id="@+id/pro_cook2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cooker2_analog"
+        app:layout_constraintEnd_toEndOf="@+id/cooker2_analog"
+        app:layout_constraintStart_toStartOf="@+id/cooker2_analog"
+        app:layout_constraintTop_toTopOf="@+id/cooker2_analog" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

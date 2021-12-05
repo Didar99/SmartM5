@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/img_cycle2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/circle_whited"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_unlock"
+        app:layout_constraintVertical_bias="0.41000003" />
+
+    <ImageView
+        android:id="@+id/img_cycle5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/circle_whited"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_cycle2"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle2" />
+
+    <ImageView
+        android:id="@+id/img_cycle4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/circle_whited"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle2"
+        app:layout_constraintEnd_toStartOf="@+id/img_cycle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle2" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/panic"
+        android:textColor="@color/gray_600"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle5"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle5"
+        app:layout_constraintTop_toBottomOf="@+id/img_cycle5" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/fire"
+        android:textColor="@color/gray_600"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle2"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle2"
+        app:layout_constraintTop_toBottomOf="@+id/img_cycle2" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/police"
+        android:textColor="@color/gray_600"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle4"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle4"
+        app:layout_constraintTop_toBottomOf="@+id/img_cycle4" />
+
+    <ImageView
+        android:id="@+id/img_moon2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/curtain"
+        app:tint="@color/light_text"
+        android:src="@drawable/ic_baseline_local_fire_department_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle2"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle2"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle2"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle2" />
+
+    <ImageView
+        android:id="@+id/img_moon3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/curtain"
+        app:tint="@color/light_text"
+        android:src="@drawable/ic_baseline_report_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle5"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle5"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle5"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle5" />
+
+    <ImageView
+        android:id="@+id/img_sun2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:contentDescription="@string/curtain"
+        app:tint="@color/light_text"
+        android:src="@drawable/ic_baseline_local_police_24"
+        app:layout_constraintBottom_toBottomOf="@+id/img_cycle4"
+        app:layout_constraintEnd_toEndOf="@+id/img_cycle4"
+        app:layout_constraintStart_toStartOf="@+id/img_cycle4"
+        app:layout_constraintTop_toTopOf="@+id/img_cycle4" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/room"
+        android:textColor="@color/light_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/security_txt3"
+        app:layout_constraintTop_toBottomOf="@+id/security_txt3" />
+
+    <ImageView
+        android:id="@+id/img_arrow2"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/curtain"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/textView9"
+        app:tint="@color/gray_600" />
+
+    <TextView
+        android:id="@+id/security_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/securitySys"
+        android:textColor="@color/light_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/security_txt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/door"
+        android:textColor="@color/bold_text"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <TextView
+        android:id="@+id/t_LightData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/a_d_y"
+        android:textColor="@color/light_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/btn_unlock" />
+
+    <TextView
+        android:id="@+id/t_LightData13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:text="@string/d_07"
+        android:textSize="8sp"
+        android:textColor="@color/gray_600"
+        app:layout_constraintStart_toEndOf="@+id/security_txt3"
+        app:layout_constraintTop_toTopOf="@+id/security_txt3"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/t_LightData10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/biometric"
+        android:textColor="@color/bold_text"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/security_txt"
+        app:layout_constraintEnd_toEndOf="@+id/security_txt"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_unlock"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="150dp"
+        android:layout_height="160dp"
+        android:padding="25dp"
+        app:backgroundTint="#FFFFFF"
+        app:cornerRadius="@dimen/_500hsdp"
+        app:icon="@drawable/ic_secure"
+        app:iconSize="100dp"
+        app:iconTint="@color/light_blue_600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/light_blue_600"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_usual"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="@dimen/_93hsdp"
+        android:layout_height="@dimen/_40hsdp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/secure"
+        android:textColor="@color/bold_text"
+        android:textSize="@dimen/_10font_ssp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_unusual"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintStart_toStartOf="@+id/btn_unlock"
+        app:layout_constraintTop_toTopOf="@+id/btn_unusual"
+        app:rippleColor="#00C853" />
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btn_police"-->
+    <!--        style="@style/Widget.MaterialComponents.Button"-->
+    <!--        android:layout_width="@dimen/_93hsdp"-->
+    <!--        android:layout_height="@dimen/_40hsdp"-->
+    <!--        android:layout_marginTop="@dimen/_44hsdp"-->
+    <!--        android:fontFamily="@font/montserrat"-->
+    <!--        android:text="@string/police"-->
+    <!--        android:textColor="@color/bold_text"-->
+    <!--        android:textSize="@dimen/_10font_ssp"-->
+    <!--        app:backgroundTint="@color/white"-->
+    <!--        app:cornerRadius="16dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/btn_unusual"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/btn_unusual"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btn_unlock"-->
+    <!--        app:rippleColor="#2979FF" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btn_fire"-->
+    <!--        style="@style/Widget.MaterialComponents.Button"-->
+    <!--        android:layout_width="@dimen/_93hsdp"-->
+    <!--        android:layout_height="@dimen/_40hsdp"-->
+    <!--        android:fontFamily="@font/montserrat"-->
+    <!--        android:text="@string/fire"-->
+    <!--        android:textColor="@color/bold_text"-->
+    <!--        android:textSize="@dimen/_10font_ssp"-->
+    <!--        app:backgroundTint="@color/white"-->
+    <!--        app:cornerRadius="16dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/btn_usual"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/btn_usual"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/btn_police"-->
+    <!--        app:rippleColor="#2979FF" />-->
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/btn_panik"-->
+    <!--        style="@style/Widget.MaterialComponents.Button"-->
+    <!--        android:layout_width="@dimen/_93hsdp"-->
+    <!--        android:layout_height="@dimen/_40hsdp"-->
+    <!--        android:layout_marginTop="@dimen/_8hsdp"-->
+    <!--        android:fontFamily="@font/montserrat"-->
+    <!--        android:text="@string/panic"-->
+    <!--        android:textColor="@color/bold_text"-->
+    <!--        android:textSize="@dimen/_10font_ssp"-->
+    <!--        app:backgroundTint="@color/white"-->
+    <!--        app:cornerRadius="16dp"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/btn_police"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/btn_police"-->
+    <!--        app:rippleColor="#2979FF" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_unusual"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="@dimen/_93hsdp"
+        android:layout_height="@dimen/_40hsdp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/ordinary"
+        android:textColor="@color/bold_text"
+        android:textSize="@dimen/_10font_ssp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_unlock"
+        app:layout_constraintEnd_toEndOf="@+id/btn_unlock"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.55"
+        app:rippleColor="@color/light_blue_600" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

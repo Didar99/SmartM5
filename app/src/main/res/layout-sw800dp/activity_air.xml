@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".TvActivity"
+    tools:ignore="MissingDefaultResource">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/access_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:layout_marginTop="72dp"
+        android:paddingHorizontal="@dimen/_12hsdp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:layout_constraintEnd_toEndOf="@+id/exit_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/exit_btn"
+        app:layout_constraintTop_toBottomOf="@+id/exit_btn"
+        app:rippleColor="@color/gray"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/Temp"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/vol_down_btn"
+        app:layout_constraintEnd_toEndOf="@+id/vol_up_btn"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="@+id/vol_up_btn"
+        app:layout_constraintTop_toBottomOf="@+id/vol_up_btn"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mute_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:layout_marginTop="4dp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:layout_constraintEnd_toStartOf="@+id/vol_up_btn"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/ch_up_btn"
+        app:layout_constraintTop_toTopOf="@+id/ch_up_btn"
+        app:rippleColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/imageViewd3"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/exit_btn"
+        app:layout_constraintStart_toStartOf="@+id/exit_btn"
+        app:layout_constraintTop_toBottomOf="@+id/access_btn"
+        app:layout_constraintVertical_bias="0.333"
+        app:rippleColor="@color/gray"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/Fan"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/ch_down_btn"
+        app:layout_constraintEnd_toEndOf="@+id/ch_up_btn"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/ch_up_btn"
+        app:layout_constraintTop_toBottomOf="@+id/ch_up_btn"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/r_right"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="8dp"
+        android:rotation="180"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/_100hsdp"
+        app:icon="@drawable/left"
+        app:iconSize="@dimen/_30hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/access_btn"
+        app:layout_constraintEnd_toEndOf="@+id/vol_down_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/vol_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/access_btn"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/gray" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/_50hsdp"
+        android:layout_height="@dimen/_35hsdp"
+        android:contentDescription="@string/heat"
+        android:src="@drawable/device_panel"
+        app:layout_constraintBottom_toBottomOf="@+id/power_btn"
+        app:layout_constraintEnd_toEndOf="@+id/mute_btn"
+        app:layout_constraintStart_toStartOf="@+id/mute_btn"
+        app:layout_constraintTop_toTopOf="@+id/power_btn" />
+
+    <TextView
+        android:id="@+id/txtTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:text="@string/_24"
+        android:textColor="@color/bold_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.482" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/vol_up_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:layout_marginTop="4dp"
+        android:paddingHorizontal="@dimen/_5hsdp"
+        android:rotation="180"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:icon="@drawable/add"
+        app:iconSize="@dimen/_30hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintEnd_toEndOf="@+id/menu_btn"
+        app:layout_constraintTop_toTopOf="@+id/ch_up_btn"
+        app:rippleColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/r_left"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="15dp"
+        android:rotation="180"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="@dimen/_100hsdp"
+        app:icon="@drawable/right"
+        app:iconSize="@dimen/_30hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/access_btn"
+        app:layout_constraintEnd_toEndOf="@+id/ch_down_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ch_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/access_btn"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/vol_down_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="@dimen/_5hsdp"
+        android:rotation="180"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:icon="@drawable/minus"
+        app:iconSize="@dimen/_30hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/exit_btn"
+        app:layout_constraintEnd_toEndOf="@+id/vol_up_btn"
+        app:layout_constraintTop_toTopOf="@+id/exit_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menu_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="@dimen/_12hsdp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/power_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.826"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/power_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/gray"
+        tools:ignore="SmallSp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cold"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewd3"
+        app:layout_constraintEnd_toEndOf="@+id/ch_down_btn"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/ch_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/imageViewd3"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/gray"
+        tools:ignore="SmallSp"
+        android:layout_marginLeft="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ch_up_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="@dimen/_5hsdp"
+        android:rotation="180"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:icon="@drawable/down"
+        app:iconSize="@dimen/_30hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/power_btn"
+        app:layout_constraintTop_toBottomOf="@+id/power_btn"
+        app:layout_constraintVertical_bias="0.113"
+        app:rippleColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/imageViewd5"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="120dp"
+        android:layout_height="85dp"
+        android:layout_marginEnd="16dp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewd3"
+        app:layout_constraintEnd_toEndOf="@+id/vol_down_btn"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/vol_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/imageViewd3"
+        app:layout_constraintVertical_bias="1.0"
+        app:rippleColor="@color/gray"
+        tools:ignore="SmallSp"
+        android:layout_marginRight="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/power_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="@dimen/_13hsdp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:icon="@drawable/turn"
+        app:iconSize="@dimen/_15hsdp"
+        app:iconTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134"
+        app:rippleColor="@color/red" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/Sleep"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mute_btn"
+        app:layout_constraintEnd_toEndOf="@+id/mute_btn"
+        app:layout_constraintStart_toStartOf="@+id/mute_btn"
+        app:layout_constraintTop_toTopOf="@+id/mute_btn"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/txtTemp2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:elevation="8dp"
+        android:text="@string/PerCent"
+        android:textColor="@color/bold_text"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/txtTemp"
+        app:layout_constraintTop_toTopOf="@+id/txtTemp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ch_down_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:layout_marginTop="72dp"
+        android:paddingHorizontal="@dimen/_5hsdp"
+        android:rotation="180"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:icon="@drawable/up"
+        app:iconSize="@dimen/_30hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ch_up_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ch_up_btn"
+        app:layout_constraintTop_toBottomOf="@+id/ch_up_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/gray" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exit_btn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="@dimen/_40hsdp"
+        android:layout_height="@dimen/_45hsdp"
+        android:paddingHorizontal="@dimen/_12hsdp"
+        app:backgroundTint="@color/white"
+        app:cornerRadius="100dp"
+        app:icon="@drawable/ic_wind"
+        app:iconSize="@dimen/_20hsdp"
+        app:iconTint="@color/remoteIcon"
+        app:layout_constraintBottom_toBottomOf="@+id/ch_down_btn"
+        app:layout_constraintEnd_toStartOf="@+id/vol_down_btn"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toEndOf="@+id/ch_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/ch_down_btn"
+        app:layout_constraintVertical_bias="0.0"
+        app:rippleColor="@color/gray" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="@dimen/_120hsdp"
+        android:layout_height="@dimen/_120hsdp"
+        android:contentDescription="@string/remote_control"
+        android:src="@drawable/shadow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/channel_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:text="@string/channel"
+        android:textColor="@color/bold_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ch_down_btn"
+        app:layout_constraintEnd_toEndOf="@+id/ch_down_btn"
+        app:layout_constraintStart_toStartOf="@+id/ch_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/ch_up_btn" />
+
+    <TextView
+        android:id="@+id/volume_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:text="@string/volume"
+        android:textColor="@color/bold_text"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/vol_down_btn"
+        app:layout_constraintEnd_toEndOf="@+id/vol_down_btn"
+        app:layout_constraintStart_toStartOf="@+id/vol_down_btn"
+        app:layout_constraintTop_toTopOf="@+id/vol_up_btn" />
+
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/timer"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewd5"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewd5"
+        app:layout_constraintStart_toStartOf="@+id/imageViewd5"
+        app:layout_constraintTop_toTopOf="@+id/imageViewd5" />
+
+    <TextView
+        android:id="@+id/txtSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/Set"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/access_btn"
+        app:layout_constraintEnd_toEndOf="@+id/access_btn"
+        app:layout_constraintStart_toStartOf="@+id/access_btn"
+        app:layout_constraintTop_toTopOf="@+id/access_btn" />
+
+    <TextView
+        android:id="@+id/txtMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/mod"
+        android:textColor="@color/bold_text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/menu_btn"
+        app:layout_constraintEnd_toEndOf="@+id/menu_btn"
+        app:layout_constraintStart_toStartOf="@+id/menu_btn"
+        app:layout_constraintTop_toTopOf="@+id/menu_btn" />
+
+    <TextView
+        android:id="@+id/txtCold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/Cold"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_cold"
+        app:layout_constraintEnd_toEndOf="@+id/btn_cold"
+        app:layout_constraintStart_toStartOf="@+id/btn_cold"
+        app:layout_constraintTop_toTopOf="@+id/btn_cold" />
+
+    <TextView
+        android:id="@+id/txtHeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/heated"
+        android:textColor="@color/bold_text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewd3"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewd3"
+        app:layout_constraintStart_toStartOf="@+id/imageViewd3"
+        app:layout_constraintTop_toTopOf="@+id/imageViewd3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
