@@ -37,6 +37,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+import static com.unity.tabletgorjav.Commands.fire_sensor_off;
 import static com.unity.tabletgorjav.Commands.gas_sensor_off;
 import static com.unity.tabletgorjav.Commands.gerKon_sensor_off;
 import static com.unity.tabletgorjav.Commands.pir_light_off;
@@ -628,6 +629,7 @@ public class MainActivity extends Activity {
 
 
             if (fire_sensor == 1 && !bool_fire) {
+                fire_sensor_off(getApplicationContext());
                 if (sms_activator == 1) { smsManager.sendTextMessage("+993" + phoneNumber, null, "Ýangyn!", null, null);}
                 if (note_activator == 1) {fire_note();}
                 bool_fire = false;

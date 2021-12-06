@@ -161,7 +161,7 @@ class Commands {
                 conn.setDoInput(true);
                 JSONObject jsonParam = new JSONObject();
                 jsonParam.put("command", "smart_door");
-                jsonParam.put("state", "1");
+                jsonParam.put("state", "0");
                 jsonParam.put("action", "");
                 Log.i("JSON", jsonParam.toString());
                 DataOutputStream os = new DataOutputStream(conn.getOutputStream());
@@ -197,7 +197,7 @@ class Commands {
                 conn.setDoInput(true);
                 JSONObject jsonParam = new JSONObject();
                 jsonParam.put("command", "smart_door");
-                jsonParam.put("state", "0");
+                jsonParam.put("state", "1");
                 jsonParam.put("action", "");
                 Log.i("JSON", jsonParam.toString());
                 DataOutputStream os = new DataOutputStream(conn.getOutputStream());
@@ -434,6 +434,43 @@ class Commands {
         });
         thread.start();
     }   // gerKon sensor -> for turn off
+    static void fire_sensor_off(Context context) {
+        // IP-Address load from pref_config
+        ip_address = PrefConfig.loadIpPref(context);
+        // load data from PrefConfig
+        strPort = PrefConfig.loadPORTPref(context);
+        strZeroParam = PrefConfig.loadZeroParam(context);
+        strFirstParam = PrefConfig.loadFirstParam(context);
+        strSecondParam = PrefConfig.loadSecondParam(context);
+        strHttp = PrefConfig.loadHttpPref(context);
+        Thread thread = new Thread(() -> {
+            try {
+                URL url = new URL(strHttp + "://" + ip_address + strPort + strZeroParam + strFirstParam + strSecondParam);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("POST");
+                conn.setRequestProperty("Content-Type", "application/json;charset=UTF-8");
+                conn.setRequestProperty("Accept","application/json");
+                conn.setDoOutput(true);
+                conn.setDoInput(true);
+                JSONObject jsonParam = new JSONObject();
+                jsonParam.put("command", "fire_command");
+                jsonParam.put("state", "0");
+                jsonParam.put("action", "");
+                Log.i("JSON", jsonParam.toString());
+                DataOutputStream os = new DataOutputStream(conn.getOutputStream());
+                os.writeBytes(jsonParam.toString());
+                os.flush();
+                os.close();
+                if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    conn.disconnect();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        thread.start();
+    }
+
     //  CURTAIN
     static void curtain_up(Context context) {
         // IP-Address load from pref_config
